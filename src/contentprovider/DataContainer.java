@@ -56,7 +56,8 @@ public class DataContainer {
         
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(filePath);
+            fileWriter = new FileWriter(filePath); // update
+            // fileWriter = new FileWriter(filePath, false); // remove delete content
             
             //fileWriter.append("Id, State, Capital");
             for(DataProvider c: countries) {
@@ -90,8 +91,17 @@ public class DataContainer {
             reader.readLine();
             
             while((line = reader.readLine()) != null){
+                //while((line = reader.readLine()) <= 20){
                 String[] fields = line.split(";");
-                
+             
+            /*    
+            for(int i=0; i<=20; i++) {
+                while (file.hasNextLine()) {
+                        count++;
+                        file.nextLine();
+                }
+            }
+            */  
                 if(fields.length > 0) {
                     DataProvider country = new DataProvider();
                     country.setId(Integer.parseInt(fields[0]));
