@@ -12,6 +12,7 @@ import java.io.IOException;
  *
  * @author Artur
  */
+
 public class DataTest {
   /*     private FileWriter fileWriter = new FileWriter();
 
